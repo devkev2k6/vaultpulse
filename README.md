@@ -124,18 +124,3 @@ Rules enforced throughout: no rounded corners, no shadows or gradients, tabular 
 
 ---
 
-## ⚠️ Known Limitations
-
-- **No persistence beyond theme.** Risk tolerance, coupon state, and dispute drafts reset on refresh.
-- **No real backend.** Every action (Pay, Send dispute, Apply coupon) is a UI-only state change.
-- **No authentication** beyond a mock auth modal — single implicit user.
-- **Dispute drafts are templated, not AI-generated.** `generateDraft()` branches on subscription status; the natural extension point is a server action / API route calling an LLM server-side so no key ships to the client.
-- Accessibility covers the essentials (focus rings, `aria-label`s, reduced motion) but hasn't had a full screen-reader audit.
-
-These are deliberate, called-out scope boundaries for a spec-driven build — not oversights.
-
----
-
-## 📄 License
-
-This project was built as a demo/hackathon-style submission. Add a license here if you plan to open-source it.
